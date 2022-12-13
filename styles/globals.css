@@ -1,0 +1,182 @@
+@import url("https://use.typekit.net/ktp2fgs.css");
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.bg-gradient-dark {
+    background: hsla(0, 0%, 0%, 1);
+
+background: linear-gradient(45deg, hsla(0, 0%, 0%, 1) 0%, hsla(315, 77%, 5%, 1) 80%);
+
+background: -moz-linear-gradient(45deg, hsla(0, 0%, 0%, 1) 0%, hsla(315, 77%, 5%, 1) 80%);
+
+background: -webkit-linear-gradient(45deg, hsla(0, 0%, 0%, 1) 0%, hsla(315, 77%, 5%, 1) 80%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#000000", endColorstr="#170312", GradientType=1 );
+}
+
+.bg-logo{
+
+    background: linear-gradient(
+		-45deg,
+    hsla(339, 71%, 39%, 0.8) 0%,
+    hsla(339, 71%, 39%, 0.8) 5%,
+    hsla(0, 0%, 100%, 0.8) 5%,
+    hsla(0, 0%, 100%, 0.8) 15%,
+    hsla(209, 70%, 34%, 0.8) 15%,
+    hsla(209, 70%, 34%, 0.8) 30%,
+    hsla(0, 0%, 100%, 0.8) 30%,
+    hsla(0, 0%, 100%, 0.8) 40%,
+    hsla(339, 71%, 39%, 0.8) 40%,
+    hsla(339, 71%, 39%, 0.8) 55%,
+    hsla(0, 0%, 100%, 0.8) 55%,
+    hsla(0, 0%, 100%, 0.8) 65%,
+    hsla(209, 70%, 34%, 0.8) 65%,
+    hsla(209, 70%, 34%, 0.8) 80%,
+    hsla(0, 0%, 100%, 0.8) 80%,
+    hsla(0, 0%, 100%, 0.8) 90%,
+    hsla(339, 71%, 39%, 0.8) 90%,
+    hsla(339, 71%, 39%, 0.8) 100%
+    );
+}
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+    
+}
+
+:root {
+	--color-background: #fcf8f3;
+	--color-primary: #aa1d4e;
+    --color-secondary: #1a5a95;
+	--color-border: #4d3e3e;
+	--color-white: #f9f9f9;
+}
+
+
+
+.barber-pole {
+    position:relative;
+	background: linear-gradient(
+		-45deg,
+        hsla(339, 71%, 39%, 1) 0%,
+        hsla(339, 71%, 39%, 1) 5%,
+        hsla(0, 0%, 100%, 1) 5%,
+        hsla(0, 0%, 100%, 1) 15%,
+        hsla(209, 70%, 34%, 1) 15%,
+        hsla(209, 70%, 34%, 1) 30%,
+        hsla(0, 0%, 100%, 1) 30%,
+        hsla(0, 0%, 100%, 1) 40%,
+        hsla(339, 71%, 39%, 1) 40%,
+        hsla(339, 71%, 39%, 1) 55%,
+        hsla(0, 0%, 100%, 1) 55%,
+        hsla(0, 0%, 100%, 1) 65%,
+        hsla(209, 70%, 34%, 1) 65%,
+        hsla(209, 70%, 34%, 1) 80%,
+        hsla(0, 0%, 100%, 1) 80%,
+        hsla(0, 0%, 100%, 1) 90%,
+        hsla(339, 71%, 39%, 1) 90%,
+        hsla(339, 71%, 39%, 1) 100%
+	);
+	background-size: 40px 40px;
+	animation: scrolling-gradient 1s linear infinite;
+}
+
+@keyframes scrolling-gradient {
+	0% {
+		background-position: 0;
+	}
+
+	100% {
+		background-position: 40px;
+	}
+}
+
+
+.barber-pole-top {
+    position: relative;
+    border-radius: 99px;
+    background-color: var(--color-white);
+
+}
+
+.barber-pole-top::before {
+    position: absolute;
+    content: "";
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.barber-pole-bottom {
+    position: relative;
+    border-radius: 99px;
+    background-color: var(--color-white);
+}
+
+.barber-pole-bottom::before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.example-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.next,
+.prev {
+  position: absolute;
+  background: white;
+  border-radius: 30px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  z-index: 2;
+}
+
+.next {
+  right: 20px;
+}
+
+.prev {
+  left: 20px;
+  transform: scale(-1);
+}
+
+
+.refresh {
+  padding: 10px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
